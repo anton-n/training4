@@ -1,0 +1,224 @@
+@import "normalize"
+@import "vars.sass"
+
+body
+	font: normal normal normal #{14px}/#{16px} $default-font
+	background-color: #eee
+	color: #000
+
+.clearfix::after
+	content: ""
+	display: table
+	clear: both
+
+.header__nav
+	float: right
+
+.header-nav__main-menu
+	float: left
+
+.header-nav__login
+	float: right
+	margin-right: 20px
+
+.header
+	background-color: #085494
+	min-height: 25px
+
+.top-menu
+	margin: 0
+	padding: 0
+	list-style-type: none
+	font-size: 0
+	max-width: 800px
+	&__item
+		display: inline-block
+		vertical-align: bottom
+	&__link
+		display: block
+		font-size: 14px
+		padding: 9px 12px 0
+		text-decoration: none
+		color: #5cafe7
+		transition: color .5s linear 0s
+		&:hover
+			text-decoration: underline
+			color: #fff
+		&:active
+			color: $green
+		&_active
+			background-color: #4eabda
+			color: #fff
+		&_offers
+			padding-left: 40px
+			border-left: #56a2dc solid 1px
+			background-image: url(../img/flag-icon.png)
+			background-repeat: no-repeat
+			background-position: 12px center
+
+.login
+	background-color: #5cafe7
+	color: #fff
+	padding: 9px 15px 0
+	&__link
+		color: #fff
+		transition: color .5s linear 0s
+		&:hover
+			color: #c1c1c1
+		&:active
+			color: $green
+			// text-decoration: none
+
+.main
+	min-height: 999px
+	background: #eee url(../img/background.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 50% 50%
+
+.registration-form
+	min-width: 560px
+	max-width: 560px
+
+.main__registration-form
+	margin: 0 auto
+	padding-top: 255px
+.registration-form
+	&__header
+		background-color: rgba(000, 000, 000, .6)
+		margin: 0
+		padding: 10px 0
+		margin-bottom: 2px
+	&__title
+		text-align: center
+		color: #fff
+		font-size: 24px
+		line-height: 24px
+	&__body
+		padding: 40px 0 20px
+		background-color: rgba(000, 000, 000, .6)
+		text-align: center
+		// margin: 0 auto
+
+.button-container
+	text-align: center
+	margin-bottom: 30px
+
+.fb-button
+	display: inline-block
+	vertical-align: middle
+	padding-left: 15px
+	height: 35px
+	line-height: 35px
+	background-color: #5B7BD5
+	background-image: linear-gradient(#3c5490, #333f65)
+	box-shadow: inset 0 1px 0 #7c8bb6
+	color: #fff
+	text-decoration: none
+	white-space: nowrap
+	border-radius: 5px
+	&:hover
+		background-color: #5B7BD5
+		background-image: linear-gradient(#3c6490, #233f65)
+	&__f
+		display: inline-block
+		vertical-align: top
+		font-size: 24px
+		font-weight: 900
+		padding-right: 15px
+		border-right: #203c6e solid 1px
+	&__text-style-weight
+		display: inline-block
+		font-weight: 900
+		&_indent
+			padding-left: 30px
+			border-left: #4e69ac solid 1px
+		&_fb-icon
+			padding-right: 54px
+			background-image: url(../img/arrow-icon.png)
+			background-repeat: no-repeat
+			background-position: 88px center
+
+.registration-form__decor
+	position: relative
+	color: #999
+	font-size: 14px
+	line-height: 16px
+	display: block
+	margin-bottom: 28px
+	&::before,
+	&::after
+		content: ""
+		position: absolute
+		height: 1px
+		width: 124px
+		background-color: #000
+		top: 9px
+		box-shadow: 0 -1px 0 #666
+	&::before
+		left: 141px
+	&::after
+		right: 141px
+
+.registration-form
+	&__input
+		display: block
+		margin: 0 auto
+		min-width: 255px
+		font-family: $default-font
+		color: #ccc
+		font-size: 14px
+		height: 36px
+		line-height: 36px
+		background-color: #101010
+		background-image: linear-gradient(to top, #111 0%, #0e0d0d 100%)
+		box-shadow: inset 0 -1px 0 #474747
+		border: none
+		text-indent: 20px
+		padding-right: 20px
+		margin-bottom: 20px
+		@include placeholder
+			color: #ccc
+	&__submit
+		display: block
+		margin: 0 auto
+	&__license
+		color: #ccc
+		font-size: 14px
+		line-height: 16px
+		position: relative
+		display: block
+		margin-bottom: 20px
+	&__checkbox
+		position: absolute
+		left: 194px
+		top: 2px
+	&__submit
+		height: 38px
+		padding: 0
+		border: none
+		border-radius: 3px
+		padding: 0 12px
+		color: #fff
+		background-color: #2e7ac4
+		background-image: linear-gradient(to top, #50aedb 0%, #2e7ac4 100%)
+		box-shadow: inset 0 2px 0 #67c6e6
+		&:hover
+			background-image: linear-gradient(to top, #50bedb 0%, #2c7ac4 100%)
+		&:active
+			box-shadow: none, inset 0 2px 0 #67d6e6
+			outline: none
+	&__create-info
+		margin: 0
+		padding: 0
+		max-width: 320px
+		margin: 20px auto 0
+		color: #ccc
+		font-size: 11px
+
+
+
+input[class="registration-form__input"]:focus:required
+	outline: none
+	background-image: linear-gradient(to top, #1b5288 0%, #1b5288 100%)
+	box-shadow: 1px 1px 10px #508ab1
